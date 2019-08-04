@@ -1,18 +1,26 @@
 package com.example.travelmantics;
 
-public class TravelDeal {
+import java.io.Serializable;
+
+public class TravelDeal implements Serializable {
     private String id;
     private String title;
     private String description;
     private String price;
     private String imageURL;
+    private String imageName;
 
-    public TravelDeal(String title, String description, String price, String imageURL) {
+    public TravelDeal(){
+
+    }
+
+    public TravelDeal(String title, String description, String price, String imageURL, String imageName) {
         this.setId(id);
         this.setTitle(title);
         this.setDescription(description);
         this.setPrice(price);
         this.setImageURL(imageURL);
+        this.setImageName(imageName);
     }
 
     public String getId() {
@@ -53,5 +61,13 @@ public class TravelDeal {
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
+    }
+
+    public void setImageName(String imageName){
+        this.imageName = imageName;
+    }
+
+    public String getImageName() {
+        return imageName;
     }
 }
